@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realtime Chat — Vanilla JS + Firebase</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="dot" id="onlineDot" title="Connection status"></div>
+      <h1>Realtime Chat</h1>
+      <div id="status" class="pill">Offline</div>
+      <div class="room">Room: <strong id="roomName">global</strong></div>
+    </header>
+
+    <div id="messages"></div>
+
+    <div class="inputbar">
+      <input id="messageInput" type="text" placeholder="Type a message and press Enter…" autocomplete="off" />
+      <button id="sendBtn">Send ↩</button>
+    </div>
+
+    <div class="footer">
+      <div class="typing" id="typing"></div>
+      <div class="namebar">
+        <span>Your name:</span>
+        <input id="nameInput" placeholder="e.g., Soubhagya" />
+        <button id="saveName">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs (Compat for simplicity). Replace with your version if needed. -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
